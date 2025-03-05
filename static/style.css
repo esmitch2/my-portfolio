@@ -1,0 +1,189 @@
+:root{
+  --color-accent: oklch(70% 0.1529 274.24);
+  color-scheme: light dark;
+}
+
+html {
+  accent-color: var(--color-accent, black);
+}
+
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+    max-width: 90ch;
+    margin-inline: auto;
+    padding: 5%;
+    padding-top: 0;
+   }
+
+nav {
+  display: flex;
+  margin-bottom: 2%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
+
+nav a {
+  flex: 15;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a:hover {
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-accent);
+  /*background-color: oklch(from var(--color-accent) 95% 5% h)*/
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+.current{
+  font-weight: bold;
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
+
+nav form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  font: inherit;
+}
+
+nav label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  font: inherit;
+}
+
+nav button {
+  grid-column: 1 / -1;
+  font: inherit;
+}
+
+nav input{
+  font: inherit;
+}
+
+nav textarea{
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 400%;
+  line-height: 1.1;
+}
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  text-wrap: balance;
+}
+
+section p{
+  text-align: center;
+}
+
+section li {
+  white-space: normal; /* Ensure text can wrap normally */
+  overflow: visible;
+  word-wrap: break-word; /* Allow long words to break if necessary */
+}
+
+section h2{
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+
+.line{
+  border-top-width: 4px;
+  border-top-style: dotted;
+  border-top-color: oklch(from var(--color-accent) 90% 10% h);
+  padding-top: 5px;
+}
+
+
+.experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+  /*background-color: oklch(from var(--color-accent) 97% 5% h);*/
+  background-color: color-mix(in oklch, var(--color-accent), canvas 90%);
+  padding: 20px;
+  border-color: oklch(from var(--color-accent) 90% 10% h);
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+.experience .company{
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 1;
+  text-wrap: balance;
+  font-weight: bold;
+}
+
+.experience .title{
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 1;
+  text-wrap: balance;
+  text-align: center;
+  font-weight: bold;
+}
+
+.experience .date{
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 1;
+  text-wrap: balance;
+  text-align: right;
+  font-weight: bold;
+}
+
+.experience ul{
+    display: block; /* Remove grid display, this isn't necessary for lists */
+    grid-column: span 3;
+    overflow: visible;
+    padding-left: 1.5em; /* Add padding to the left for proper list item indentation */ 
+}
+
+.home{
+  text-align: center;
+}
+
+.color-scheme{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  gap: 4px;
+  font-size:80%
+}
