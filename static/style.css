@@ -97,13 +97,6 @@ h1 {
   line-height: 1.1;
 }
 
-article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  text-wrap: balance;
-}
-
 section p{
   text-align: center;
 }
