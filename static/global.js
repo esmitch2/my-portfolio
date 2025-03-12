@@ -11,10 +11,10 @@ function $$ (selector, context = document) {
 // }
 
 let pages = [
-	{url: ".", title: "Home"},
-	{url: "projects", title: "Projects"},
-    {url: "contact", title: "Contact"},
-    {url: "resume", title: "Resume"},
+	{url: "./", title: "Home"},
+	{url: "./projects", title: "Projects"},
+    {url: "./contact", title: "Contact"},
+    {url: "./resume", title: "Resume"},
     {url: "https://github.mit.edu/esmitch/portfolio", title: "GitHub"},
 	// add the rest of your pages here
 ];
