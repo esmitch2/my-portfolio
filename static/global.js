@@ -10,19 +10,19 @@ function $$ (selector, context = document) {
 // 	currentLink.classList.add("current");
 // }
 
-let pages = [
-	{url: "./", title: "Home"},
-	{url: "./projects", title: "Projects"},
-    {url: "./contact", title: "Contact"},
-    {url: "./resume", title: "Resume"},
-    {url: "https://github.mit.edu/esmitch/portfolio", title: "GitHub"},
-	// add the rest of your pages here
-];
+// let pages = [
+// 	{url: ".", title: "Home"},
+// 	{url: "projects", title: "Projects"},
+//     {url: "contact", title: "Contact"},
+//     {url: "resume", title: "Resume"},
+//     {url: "https://github.mit.edu/esmitch/portfolio", title: "GitHub"},
+// 	// add the rest of your pages here
+// ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
-let nav = document.createElement("nav");
-document.body.prepend(nav);
+// let nav = document.createElement("nav");
+// document.body.prepend(nav);
 
 for (let p of pages) {
 	let url = p.url;
@@ -48,27 +48,28 @@ for (let p of pages) {
 
 }
 
-document.body.insertAdjacentHTML("afterbegin", `
-	<label class="color-scheme">
-		Theme:
-		<select>
-			<option value="light dark">Automatic</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-		</select>
-	</label>`
-);
 
-let select = document.querySelector("select");
+// document.body.insertAdjacentHTML("afterbegin", `
+// 	<label class="color-scheme">
+// 		Theme:
+// 		<select>
+// 			<option value="light dark">Automatic</option>
+//             <option value="light">Light</option>
+//             <option value="dark">Dark</option>
+// 		</select>
+// 	</label>`
+// );
 
-select.addEventListener("input", function (event) {
-	console.log("color scheme changed to", event.target.value);
-    document.documentElement.style.setProperty("color-scheme", event.target.value);
-    localStorage.colorScheme = event.target.value;
-});
+// let select = document.querySelector("select");
+
+// select.addEventListener("input", function (event) {
+// 	console.log("color scheme changed to", event.target.value);
+//     document.documentElement.style.setProperty("color-scheme", event.target.value);
+//     localStorage.colorScheme = event.target.value;
+// });
 
 
-if (localStorage.colorScheme) {
-	document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
-	select.value = localStorage.colorScheme;
-}
+// if (localStorage.colorScheme) {
+// 	document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+// 	select.value = localStorage.colorScheme;
+// }
