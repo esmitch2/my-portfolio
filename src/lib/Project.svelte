@@ -6,7 +6,10 @@
 <article>
     <svelte:element this={"h" + hLevel}>{data.title}</svelte:element>
     <img src={data.image} alt="">
-    <p>{data.description}</p>
+    <div>
+        <p>{data.description}</p>
+        <div class="year">{data.year}</div>
+    </div>
 </article>
 
 <style>
@@ -15,5 +18,10 @@
     grid-template-rows: subgrid;
     grid-row: span 3;
     text-wrap: balance;
-    }   
+    }
+    
+    div.year{
+        font-style:italic;
+        font-family:Baskerville;
+    }
 </style>
