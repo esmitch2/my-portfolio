@@ -6,7 +6,6 @@
         { url: "./", title: "Home" },
         { url: "./projects", title: "Projects" },
         { url: "./contact", title: "Contact" },
-        { url: "./meta", title: "Meta" },
         { url: "https://github.mit.edu/esmitch/portfolio", title: "GitHub" }
         // add the rest of your pages here
     ];
