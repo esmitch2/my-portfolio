@@ -91,6 +91,7 @@
                 class:selected={selectedIndex === index}
                 tabindex="0"
                 role="button"
+                aria-label={`Pie chart segment: ${data[index]?.label ?? index}`}
                 on:click={e => toggleWedge(index, e)}
                 on:keyup={e => toggleWedge(index, e)}
                 />
