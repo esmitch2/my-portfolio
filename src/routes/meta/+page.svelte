@@ -304,6 +304,7 @@ $: languageBreakdown = allTypes.map(type => [type, selectedCounts.get(type) || 0
     font-weight: bold;
     margin: 0;
     grid-column: 2;
+    color: black;
   }
 
   .tooltip {
@@ -317,17 +318,6 @@ $: languageBreakdown = allTypes.map(type => [type, selectedCounts.get(type) || 0
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
-
-
-
-
-
-
-
-
-
-
-
 
 
   circle {
